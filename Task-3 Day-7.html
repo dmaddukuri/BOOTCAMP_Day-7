@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click "Try it" to display the sorted numbers.</p>
+<input id="d" type="text" name="data" placeholder="enter numbers from 1-20 separated by comma "><br> <br>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var str = document.getElementById("d").value;
+  var arr = str.split(",");
+  arr.sort(function(a, b){return b - a});
+  document.getElementById("demo").innerHTML = arr;
+}
+</script>
+
+</body>
+</html>
